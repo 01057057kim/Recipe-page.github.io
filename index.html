@@ -49,8 +49,8 @@
       max-width: 1440px;
       min-height: 100vh;
       background-color: var(--eggShell);
-      margin-top: 2%;
-      margin-bottom: 2%;
+      margin-top: 35vh;
+      margin-bottom: 35vh;
     }
 
     .container {
@@ -120,11 +120,11 @@
     }
 
     .prep ul {
-      font-size: 16px;
+      font-size: 12px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 1.2em;
+      padding-left: 1.7em;
       padding-right: 0.9em;
       gap: 0.5em;
       color: var(--darkRaspberry);
@@ -140,11 +140,11 @@
 
 
     .ingredients ul {
-      font-size: 16px;
+      font-size: 12px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 1.5em;
+      padding-left: 1.7em;
       padding-right: 0.9em;
       gap: 0.5em;
       color: var(--wengeBrown);
@@ -181,7 +181,7 @@
     .instructor li {
       color: var(--wengeBrown);
       padding-left: 1em;
-      /* font-weight: 800;*/
+
     }
 
     .details {
@@ -193,7 +193,7 @@
     hr {
       border: none;
       height: 1px;
-      background-color: var(--lightGrey)
+      background-color: var(--lightGrey);
     }
 
     .nutrition p {
@@ -203,43 +203,48 @@
       margin-bottom: 1em;
     }
 
-    .nutrition ul {
-      font-size: 16px;
-      display: flex;
-      flex-direction: column;
-      padding-left: 0em;
-      gap: 0.5em;
-      color: var(--wengeBrown);
-      list-style-type: none;
-      margin-bottom: 0.5em;
+    table {
+      text-align: left;
+      position: relative;
+      border-collapse: collapse;
+      width: 100%;
     }
 
-    .nutrition li {
+    th {
       font-size: 16px;
       font-family: 'Outfit', sans-serif;
-      display: flex;
-      justify-content: space-between;
-      padding-left: 2em;
-      padding-right: 40%;
+      color: var(--wengeBrown);
+      font-weight: normal;
+      padding: 0.7em 1em 0.7em 1.5em;
+      border-bottom: 1px solid var(--lightGrey);
+    }
+
+    table tr:last-child th {
+      border-bottom: none;
     }
 
     .nutrition span {
       font-weight: 600;
       color: var(--nutmeg);
+      margin-left: auto;
     }
 
     @media screen and (max-width: 375px) {
-      /* I'm not very good with @media can anyone help me? thank you. */
+      #img1 {
+        max-width: 100%
+      }
     }
 
     @media screen and (max-width: 1440px) {
-      /* I'm not very good with @media can anyone help me? thank you. */
+      #img1 {
+        max-width: 100%
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <main class="container">
     <img id="img1" src="./assets/images/image-omelette.jpeg" alt="">
     <div class="simple">
       <h1>Simple Omelette Recipe</h1>
@@ -302,26 +307,27 @@
 
       <p>The table below shows nutritional values per serving without the additional fillings.</p>
       <div>
-        <ul>
-          <li>Calories
-            <span>277kcal</span></li>
-          <hr>
-
-          <li>Carbs
-            <span>0g</span></li>
-          <hr>
-
-          <li>Protein
-            <span>20g</span></li>
-          <hr>
-
-          <li>Fat
-            <span>22g</span></li>
-        </ul>
+        <table>
+          <tr>
+            <th>Calories</th>
+            <th><span>277kcal</span></th>
+          </tr>
+          <tr>
+            <th>Carbs</th>
+            <th><span>0g</span></th>
+          </tr>
+          <tr>
+            <th>Protein</th>
+            <th><span>20g</span></th>
+          </tr>
+          <tr>
+            <th>Fat</th>
+            <th><span>22g</span></th>
+          </tr>
+        </table>
       </div>
     </div>
-
-  </div>
+  </main>
   <!--<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Kim</a>.-->
